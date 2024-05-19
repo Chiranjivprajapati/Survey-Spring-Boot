@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "4185c212-de03-4633-aea5-fc4f4c23e72d",
+		"name": "SurveyResponse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve Existing Responses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/survey-responses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"survey-responses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a survey response by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/survey-responses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"survey-responses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Specific Response",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"staffInteraction\": \"Very satisfied\",\r\n    \"costOfDelivery\": \"Very satisfied\",\r\n    \"deliveryOptions\": \"Neither satisfied nor dissatisfied\",\r\n    \"packageCondition\": \"Very satisfied\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/survey-responses/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"survey-responses",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new survey response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"staffInteraction\": \"Very satisfied\",\r\n    \"costOfDelivery\": \"Very satisfied\",\r\n    \"deliveryOptions\": \"Somewhat satisfied\",\r\n    \"packageCondition\": \"Very satisfied\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/survey-responses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"survey-responses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a survey response",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/survey-responses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"survey-responses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

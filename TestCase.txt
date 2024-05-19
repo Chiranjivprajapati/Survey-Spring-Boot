@@ -1,0 +1,41 @@
+1. Create Operation (POST /survey-responses)
+
+  a. Successfully create a new survey response.
+    Input: Valid JSON body with all fields.
+    Expected Result: HTTP 201 Created, response body contains the created survey response with an ID.
+  b. Fail to create a survey response with missing required fields or invalid data..
+    Input: JSON body missing one or more fields.
+    Expected Result: HTTP 400 Bad Request, error message indicating which fields are missing.
+
+2. Read Operation (GET /survey-responses)
+
+  a. Successfully retrieve all survey responses.
+    Input: None.
+    Expected Result: HTTP 200 OK, response body contains a list of survey responses.
+  b. Successfully retrieve a specific survey response by ID.
+    Input: Valid survey response ID.
+    Expected Result: HTTP 200 OK, response body contains the requested survey response.
+  c. Fail to retrieve a specific survey response with a non-existent ID.
+    Input: Non-existent survey response ID.
+    Expected Result: HTTP 404 Not Found, error message indicating the survey response is not found.
+
+3. Update Operation (PUT /survey-responses/{id})
+
+  a. Successfully update an existing survey response.
+    Input: Valid survey response ID and valid JSON body with updated values.
+    Expected Result: HTTP 200 OK, response body contains the updated survey response.
+  b. Fail to update a survey response with a non-existent ID.
+    Input: Non-existent survey response ID and valid JSON body.
+    Expected Result: HTTP 404 Not Found, error message indicating the survey response is not found.
+  c. Fail to update a survey response with invalid data.
+    Input: Valid survey response ID and invalid JSON body (e.g., missing fields or invalid values).
+    Expected Result: HTTP 400 Bad Request, error message indicating validation issues.
+
+4. Delete Operation (DELETE /survey-responses/{id})
+
+    a. Successfully delete an existing survey response.
+      Input: Valid survey response ID.
+      Expected Result: HTTP 204 No Content, no response body.
+    b. Fail to delete a survey response with a non-existent ID.
+      Input: Non-existent survey response ID.
+      Expected Result: HTTP 404 Not Found, error message indicating the survey response is not found.
